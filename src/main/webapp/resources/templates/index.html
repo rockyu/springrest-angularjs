@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en" ng-app="TodoApp">
+<head>
+    <meta charset="utf-8">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="resources/css/app.css"/>
+    <link rel="stylesheet" href="resources/bootstrap/css/bootstrap.min.css" />
+    <!--<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet"/>-->
+</head>
+<body>
+<div class="container">
+
+    <div class="masthead">
+        <h3 class="muted">Todo App</h3>
+        <div class="navbar" ng-controller="HeaderController">
+            <div class="navbar-inner">
+                <div class="container">
+                    <ul class="nav">
+                        <li ng-class="{ active: isActive('/home')}"><a href="#/home">Home</a></li>
+                        <li ng-class="{ active: isActive('/todoes')}"><a href="#/todoes">Todos</a></li>
+                        <li ng-class="{ active: isActive('/feedback')}"><a href="#/feedback">Feedback</a></li>
+                        <li ng-class="{ active: isActive('/downloads')}"><a href="#/downloads">Downloads</a></li>
+                        <li ng-class="{ active: isActive('/contact')}"><a href="#/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div><!-- /.navbar -->
+    </div>
+
+
+    <hr class="" />
+    <div ng-view></div>
+
+    <div class="footer">
+        <p>&copy; Todo App 2013</p>
+    </div>
+
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+<script src="resources/js/lib/ui-bootstrap-custom-tpls-0.6.0.min.js"></script>
+<script src="resources/js/lib/angular-sanitize.min.js"></script>
+<script src="resources/js/lib/underscore.js"></script>
+<script src="resources/js/app.js"></script>
+<script src="resources/js/services.js"></script>
+<script src="resources/js/controllers/TodoController.js"></script>
+<script src="resources/js/controllers/UserController.js"></script>
+<script src="resources/js/controllers/HeaderController.js"></script>
+<script src="resources/js/controllers/FeedbackController.js"></script>
+<script src="resources/js/filters.js"></script>
+<script src="resources/js/directives.js"></script>
+</body>
+</html>
